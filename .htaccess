@@ -1,8 +1,6 @@
-<IfModule mod_rewrite.c>
+# working example for virtual hosting by ionos.de
 RewriteEngine on
 DirectoryIndex index.html yellow.php
+RewriteBase /
 RewriteRule ^(content|system)/ error [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ yellow.php [L]
-</IfModule>
